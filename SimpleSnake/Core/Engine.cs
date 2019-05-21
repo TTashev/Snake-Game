@@ -16,7 +16,7 @@ namespace SimpleSnake.Core
         private Position boardPos;
         private Snake snake;
         private Food food;
-        private LevelManager levels;
+        private LevelLoader levels;
         private int gameScore;
 
         public Engine(DrawManager drawManager, Snake snake, Position boardPosition)
@@ -24,7 +24,7 @@ namespace SimpleSnake.Core
             this.drawManager = drawManager;
             this.boardPos = boardPosition;
             this.snake = snake;
-            this.levels = new LevelManager();
+            this.levels = new LevelLoader();
             this.InitializeFood();
             //this.InitializeBoarders();
             this.drawManager.DrawLevel(levels.getLevel());
